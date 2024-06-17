@@ -1,0 +1,12 @@
+
+
+.startRating{
+    font-size: 24px;
+    /* color: white; */
+}
+.star{
+    cursor: pointer;
+}
+.star.hover{
+    color: gold;
+}
