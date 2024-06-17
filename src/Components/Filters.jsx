@@ -35,7 +35,8 @@ useEffect(()=>{
   return (
     <div className='flex flex-col w-56 gap-2 px-2 items-start'>
     <span>Filter Products</span>
-    <span className=' bg-slate-500 px-3 rounded-full text-white cursor-pointer'>
+    <span className='  cursor-pointer inline-block py-2 px-6 rounded-lg bg-[#989898] hover:bg-white hover:text-[#989898] hover:outline
+    focus:text-[#989898] focus:bg-gray-200 text-gray-50 font-bold leading-loose transition duration-300'>
         <input type='radio' className='mr-2 relative cursor-pointer text-2xl ' id='ascending' name='sort'
             onClick={()=>filterDispatch({
                 type:"SORT_BY_PRICE",
@@ -45,7 +46,8 @@ useEffect(()=>{
         />
         <label htmlFor='ascending'> Low To High </label>
     </span>
-    <span className=' bg-slate-500 px-3 cursor-pointer rounded-full text-white'>
+    <span className=' cursor-pointer inline-block py-2 px-6 rounded-lg bg-[#989898] hover:bg-white hover:text-[#989898] hover:outline
+    focus:text-[#989898] focus:bg-gray-200 text-gray-50 font-bold leading-loose transition duration-300'>
         <input type='radio' className='mr-2 ' id='descending' name='sort'
             onClick={()=>filterDispatch({
                 type:"SORT_BY_PRICE",
@@ -55,7 +57,8 @@ useEffect(()=>{
         />
         <label htmlFor='descending'>Descending</label>
     </span>
-    <span >
+    <span className='cursor-pointer inline-block py-2 px-6 rounded-lg bg-[#989898] hover:bg-white hover:text-[#989898] hover:outline
+    focus:text-[#989898] focus:bg-gray-200 text-gray-50 font-bold leading-loose transition duration-300'>
         <input type='checkbox' className='mr-2 ' id='outofstock' name='outofstock'
             onClick={()=>filterDispatch({
                 type:"FILTER_BY_STOCK",
@@ -63,7 +66,7 @@ useEffect(()=>{
             })}
             checked={byStock}
         />
-        <label htmlFor='outofstock'>Include Out Of Stock</label>
+        <label htmlFor='outofstock'> Out Of Stock</label>
     </span>
     <span className='flex items-center'>
             <label className='p-2'>Rating</label>

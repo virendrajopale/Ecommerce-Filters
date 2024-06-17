@@ -13,16 +13,17 @@ const Card = ({prod,cart,dispatch}) => {
     after:absolute after:inset-0 overflow-hidden '>
    <img className='w-44 aspect-square group-hover:bg-gray-400 rounded-full mx-auto transition-all 
    duration-300 group-hover:transition-all group-hover:duration-300 group-hover:-translate-y-2 ' src={prod.thumbnail} alt={prod.title}/>
-   <p className='  font-thin group-hover:text-white text-black transition-all duration-500 '>{prod.title}</p>
-   <div className='flex flex-row justify-center items-center w-full h-full flex-1 mt-5 mb-0 text-center'>
-   <p className="text-yellow font-semibold group-hover:text-white transition-all duration-500 ">  &#x20B9;{prod.price} </p>
+   <p className='   group-hover:text-[#989898] text-black transition-all duration-500 '>{prod.title}</p>
+   <div className='flex flex-row justify-center items-center w-full h-full flex-1 mt-5 mb-0'>
+   <p className="text-yellow font-semibold group-hover:text-white transition-all duration-500">  &#x20B9;{prod.price} </p>
    </div>
    <StarRating rating={prod.rating}/>
-   <span className='flex border-t-2 gap-2 text-white'>
-   <button className='bg-red-300 rounded-lg'>ORDER NOW </button>
+   
+  
 
-   <button className=' bg-green-300 rounded-lg'  onClick={()=>dispatch({type:!inCart?"ADD-TO-CART":"REMOVE-FROM-CART",payload:prod})}>{prod.inStock ?!inCart?"ADD TO CART":"REMOVE":"OUT OF STOCK"}</button>
-   </span>
+   <button className="inline-block py-2 px-6 rounded-lg bg-[#989898] hover:bg-white hover:text-[#989898]
+    focus:text-[#989898] focus:bg-gray-200 text-gray-50 font-bold leading-loose transition duration-300" onClick={()=>dispatch({type:!inCart?"ADD-TO-CART":"REMOVE-FROM-CART",payload:prod})}>{prod.inStock ?!inCart?"ADD TO CART":"REMOVE":"OUT OF STOCK"}</button>
+
    </span>
   )
 }

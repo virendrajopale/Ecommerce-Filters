@@ -11,7 +11,7 @@ motion
     <nav className='h-fit flex items-center justify-between bg-yellow-700 p-2'>
     <Link to={'/'}>
 
-    <motion.h2  whileHover={{scale:1.2}} className='text-2xl font-mono text-white'>
+    <motion.h2  whileHover={{scale:1.02}} className='text-2xl font-mono text-white'>
 
         Shop Here
     </motion.h2>
